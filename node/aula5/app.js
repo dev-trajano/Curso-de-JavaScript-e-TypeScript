@@ -17,7 +17,8 @@ async function lerArquivo( caminho){
     const dados = await ler(caminho)
     rederizaDados(dados)
 }
-function rederizaDados(){
-    console.log(dados)
+function rederizaDados(dados){
+    dados =JSON.parse(dados);
+    dados.forEach(val => console.log(val.nome))
 }
 lerArquivo(caminhoAquivo)
