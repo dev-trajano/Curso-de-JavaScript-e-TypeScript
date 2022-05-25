@@ -1,35 +1,33 @@
 const express = require('express');
-
 const app = express();
 
-//            criar    lerArquivo   atualizar    apagar
-// CRUD   ->  CREATE,  READ,        UPDATE,      DELETE
-//            POST     GET          PUT          DELETE  
 
-// http://meusitest.com/  <- GET -> Entrega a pagina/
-// http://meusitest.com/sobre  <- GET -> Entrega a pagina/sobre
-// http://meusitest.com/contato  <- GET -> Entrega a pagina/contato
+//         Criar   ler   atualizar apagar
+// CRUD -> CREATE, READ, UPDATE,   DELETE
+//         POST    GET   PUT       DELETE
 
-app.get('/', (req,res) => {
-    res.send(`
+// http://meusite.com/ <- GET -> Entregue a página /
+// http://meusite.com/sobre <- GET -> Entregue a página /sobre
+// http://meusite.com/contato <- GET -> Entregue a página /contato
 
-    <form action="/" method="post">
-    Nome: <input type="text" name="nome">
-    <button>Enviar</button>
-    </form>
-
-    `);
+app.get('/', (req, res) => {
+  res.send(`
+  <form action="/" method="POST">
+  Nome: <input type="text" name="nome">
+  <button>Enviar</button>
+  </form>
+  `);
 });
 
 app.post('/', (req, res) => {
-    res.send('Recebi o formulário');
-})
+  res.send('Recebi o formulário');
+});
 
 app.get('/contato', (req, res) => {
-    res.send('Obrigado por entrar em Contato com a gente!');
-})
+  res.send('Obrigado por entrar em contato com a gente.');
+});
 
-app.listen(3000, ()=>{
-    console.log('Acessar http://localhost:3000');
-    console.log('listening on port 3000')
+app.listen(3000, () => {
+  console.log('Acessar http://localhost:3000');
+  console.log('Servidor executando na porta 3000');
 });

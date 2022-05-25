@@ -1,2 +1,4 @@
- const multiplicacao = require('./mod');
- console.log(multiplicacao(2, 2))
+const Cachorro = require('./z/mod2');
+
+const c1 = new Cachorro('Dog');
+c1.latir();
