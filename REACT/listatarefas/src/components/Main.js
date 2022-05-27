@@ -15,7 +15,7 @@ export default class Main extends Component {
 	render(){
 		// const { novaTarefa } = this.state;
 		return (
-			<div className="classname">
+			<div className="main">
 				<h1>Lista de trarefas</h1>
 				<form action="#">
 					<input onChange={this.handleChange} type="text" />
