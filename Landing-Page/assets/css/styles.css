@@ -1,0 +1,103 @@
+/* ---------------Configurações gerais--------------- */
+
+:root {
+  --primary-color: #0a1128;
+  --white-color: #ffffff;
+  --gap: 3rem;
+  --light-gray-color: #eeeeee;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+a {
+  text-decoration: none;
+}
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+ */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+}
+.white-bg {
+  background: var(--white-color);
+}
+
+/* ---------------menu--------------- */
+ .menu {
+   /* background: var(--white-color); */
+   position: fixed;
+   top:0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   border-bottom: 1px solid var(--light-gray-color);
+ }
+
+ .logo {
+   font-size: 2.3rem;
+   font-family: 'Montserrat', sans-serif;
+   padding: var(--gap);
+   /* color: inherit; */
+ }
+
+ .menu-content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 0;
+   padding-bottom:0;
+
+ }
+
+ .menu ul {
+   list-style: none;
+   display: flex;
+ }
+ .menu ul li a {
+   display: block;
+   padding: 2rem;
+   font-size: 1.8rem;
+   color: var(--primary-color);
+   position: relative;
+ }
+ .menu ul li a::after {
+   content:'';
+   position: absolute;
+   bottom: 1rem;
+   left: 50px;
+   width: 0;
+   height: 0.2rem;
+   background:crimson;
+   transition: all 300ms ease-in-out;
+ }
+ .menu ul li a:hover::after {
+   width:50px;
+   left: 25px;
+
+ }
+
+/* ---------------?????--------------- */
+ .section {
+  min-height: 100vh;
+ }
+
+.main-bg {
+  background-image: url('../img/main-bg.svg');
+   background-size: cover;
+   background-position: center center;
+   color: var(--white-color);
+ }
+
+ .section {
+  min-height: 1200px;
+ }
+
